@@ -1,6 +1,6 @@
 {
   "name": "fluvius-meter-card",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "description": "Home Assistant Lovelace card for the Belgian (Fluvius) digital meter",
   "private": true,
   "license": "MIT",
