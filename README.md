@@ -17,15 +17,36 @@ Screenshots come from the dev page with mocked data; regenerate them with `npm r
 
 ## Install in Home Assistant
 
-1. `npm install` then `npm run build`. The output is `dist/fluvius-meter-card.js`.
-2. Copy it to `/config/www/fluvius-meter-card.js`.
-3. **Settings → Dashboards → ⋮ → Resources → Add resource**
-   URL `/local/fluvius-meter-card.js`, type *JavaScript module*.
-4. Hard-refresh the browser and add the card via **Add card → Fluvius Meter Card**.
+### HACS (recommended)
+
+[![Open your Home Assistant instance and open this repository inside HACS.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=lieven121&repository=HA-digital-meter-card&category=plugin)
+
+1. Click the button above (or in HACS: **⋮ → Custom repositories**, add
+   `https://github.com/lieven121/HA-digital-meter-card` with type *Dashboard*).
+2. Click **Download**. HACS adds the dashboard resource for you.
+3. Hard-refresh the browser and add the card via **Add card → Fluvius Meter Card**.
    Everything (entities, fuse, language, …) can be set in the visual editor.
 
-When you update, bump `version` in `package.json` (it is logged in the browser console)
-or add `?v=2` to the resource URL so browsers don't keep the old file.
+HACS shows new releases as updates. Pre-releases only appear after enabling
+**Show beta versions** on the repository in HACS.
+
+### Manual
+
+1. Download `fluvius-meter-card.js` from the [latest release](https://github.com/lieven121/HA-digital-meter-card/releases)
+   (or build it yourself: `npm install && npm run build` → `dist/fluvius-meter-card.js`).
+2. Copy it to `/config/www/fluvius-meter-card.js`.
+3. **Settings → Dashboards → ⋮ → Resources → Add resource**
+   URL `/local/fluvius-meter-card.js?v=1.0.0`, type *JavaScript module*.
+   Change the `?v=` on every update so browsers don't keep the old file.
+4. Hard-refresh the browser and add the card via **Add card → Fluvius Meter Card**.
+
+The browser console logs `FLUVIUS-METER-CARD v<version>` so you can see which version is loaded.
+
+## Releasing
+
+1. Bump `version` in `package.json`, commit, and tag it: `git tag -a v1.2.3 -m v1.2.3`.
+2. `npm run build`, then create a GitHub release for the tag with `dist/fluvius-meter-card.js` attached
+   (`gh release create v1.2.3 dist/fluvius-meter-card.js`). HACS installs that release asset.
 
 ## Development
 
