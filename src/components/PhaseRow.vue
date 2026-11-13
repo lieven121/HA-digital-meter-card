@@ -54,19 +54,19 @@ const power = computed((): { kw: number | null; key: EntityKey } => {
 
 <style>
 .ph { display:grid; grid-template-columns:22px 1fr 54px 64px; align-items:center; column-gap:8px; row-gap:5px;
-  font-size:13px; padding:8px 10px; border-radius:var(--fm-radius); background:var(--fm-soft); }
-.ph-n { color:var(--fm-muted); font-weight:500; font-size:12px; }
+  font-size:13px; padding:8px 10px; border-radius:var(--dm-radius); background:var(--dm-soft); }
+.ph-n { color:var(--dm-muted); font-weight:500; font-size:12px; }
 .ph-bar { position:relative; border-radius:4px; padding:5px 0; background-clip:content-box; }
 .ph-bar.v { height:6px; background-image:linear-gradient(90deg,
-    color-mix(in srgb,var(--fm-bad) 40%,transparent) 0%, color-mix(in srgb,var(--fm-ok) 40%,transparent) 11%,
-    color-mix(in srgb,var(--fm-ok) 40%,transparent) 89%, color-mix(in srgb,var(--fm-bad) 40%,transparent) 100%); }
-.ph-bar.v i { position:absolute; top:2px; width:4px; height:12px; margin-left:-2px; border-radius:2px; background:var(--fm-text); transition:left .5s; }
-.ph-bar.v i.bad { background:var(--fm-bad); }
+    color-mix(in srgb,var(--dm-bad) 40%,transparent) 0%, color-mix(in srgb,var(--dm-ok) 40%,transparent) 11%,
+    color-mix(in srgb,var(--dm-ok) 40%,transparent) 89%, color-mix(in srgb,var(--dm-bad) 40%,transparent) 100%); }
+.ph-bar.v i { position:absolute; top:2px; width:4px; height:12px; margin-left:-2px; border-radius:2px; background:var(--dm-text); transition:left .5s; }
+.ph-bar.v i.bad { background:var(--dm-bad); }
 .ph-bar.a { height:8px; }
-.ph-bar.a::before { content:""; position:absolute; left:0; right:0; top:5px; height:8px; border-radius:4px; background:var(--fm-line); }
+.ph-bar.a::before { content:""; position:absolute; left:0; right:0; top:5px; height:8px; border-radius:4px; background:var(--dm-line); }
 .ph-bar.a .fill { position:absolute; left:0; right:0; top:5px; height:8px; transition:clip-path .6s ease; }
 .ph-val { text-align:right; font-size:13px; padding:2px 4px; }
-.ph-val.warn { color:var(--fm-warn); } .ph-val.over { color:var(--fm-bad); }
-.ph-kw { text-align:right; font-size:12px; color:var(--fm-muted); font-variant-numeric:tabular-nums; padding:2px 4px; }
-.ph-kw.imp { color:var(--fm-import); } .ph-kw.exp { color:var(--fm-export); }
+.ph-val.warn { color:var(--dm-warn); } .ph-val.over { color:var(--dm-bad); }
+.ph-kw { text-align:right; font-size:12px; color:var(--dm-muted); font-variant-numeric:tabular-nums; padding:2px 4px; }
+.ph-kw.imp { color:var(--dm-import); } .ph-kw.exp { color:var(--dm-export); }
 </style>

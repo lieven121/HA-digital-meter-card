@@ -37,8 +37,8 @@ const totals = computed((): Total[] => {
 
 <style>
 .totals { display:grid; grid-template-columns:1fr 1fr; gap:6px; }
-.totals > div { display:flex; flex-direction:column; gap:2px; padding:8px 10px; border-radius:var(--fm-radius); background:var(--fm-soft); }
+.totals > div { display:flex; flex-direction:column; gap:2px; padding:8px 10px; border-radius:var(--dm-radius); background:var(--dm-soft); }
 .totals > div.wide { grid-column:span 2; }
-.totals span { font-size:11px; color:var(--fm-muted); }
+.totals span { font-size:11px; color:var(--dm-muted); }
 .totals b { font-size:14px; }
 </style>

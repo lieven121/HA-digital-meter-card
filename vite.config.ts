@@ -20,7 +20,7 @@ export default defineConfig({
     __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: "false",
   },
   build: {
-    lib: { entry: "src/main.ts", formats: ["es"], fileName: () => "fluvius-meter-card.js" },
+    lib: { entry: "src/main.ts", formats: ["es"], fileName: () => "digital-meter-card.js" },
     target: "es2021",
     sourcemap: false,
   },

@@ -89,7 +89,7 @@ export function useStatistics(opts: {
       });
       for (const k of keys) mini[k] = bucketChanges(r?.[ent.id(k)] ?? [], start, MINI_STEP_MS, n);
     } catch (e) {
-      console.warn("fluvius-meter-card: statistics unavailable", e);
+      console.warn("digital-meter-card: statistics unavailable", e);
     }
   }
 

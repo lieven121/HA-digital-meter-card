@@ -26,10 +26,10 @@ const chart = computed(() => {
     <svg class="spark" :viewBox="`0 0 ${W} ${H}`" preserveAspectRatio="none">
       <defs>
         <linearGradient id="gc" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="var(--fm-import)" stop-opacity=".35" /><stop offset="1" stop-color="var(--fm-import)" stop-opacity="0" />
+          <stop offset="0" stop-color="var(--dm-import)" stop-opacity=".35" /><stop offset="1" stop-color="var(--dm-import)" stop-opacity="0" />
         </linearGradient>
         <linearGradient id="gp" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="var(--fm-export)" stop-opacity=".35" /><stop offset="1" stop-color="var(--fm-export)" stop-opacity="0" />
+          <stop offset="0" stop-color="var(--dm-export)" stop-opacity=".35" /><stop offset="1" stop-color="var(--dm-export)" stop-opacity="0" />
         </linearGradient>
       </defs>
       <path :d="chart.imp.area" fill="url(#gc)" /><path :d="chart.imp.line" class="l imp" />
@@ -45,6 +45,6 @@ const chart = computed(() => {
 .spark-wrap { margin:6px 0 4px; padding:4px; margin-inline:-4px; }
 .spark { width:100%; height:64px; display:block; }
 .spark .l { fill:none; stroke-width:1.6; vector-effect:non-scaling-stroke; stroke-linejoin:round; }
-.spark .imp { stroke:var(--fm-import); } .spark .exp { stroke:var(--fm-export); }
-.spark-meta { display:flex; justify-content:space-between; font-size:11px; color:var(--fm-muted); margin-top:4px; }
+.spark .imp { stroke:var(--dm-import); } .spark .exp { stroke:var(--dm-export); }
+.spark-meta { display:flex; justify-content:space-between; font-size:11px; color:var(--dm-muted); margin-top:4px; }
 </style>

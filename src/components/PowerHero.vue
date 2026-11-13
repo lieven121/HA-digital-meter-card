@@ -30,13 +30,13 @@ const direction = computed(() =>
 <style>
 .hero { margin-top:14px; }
 .big { display:inline-block; font-size:44px; font-weight:500; line-height:1; letter-spacing:-1px; font-variant-numeric:tabular-nums; padding:2px 4px; margin-left:-4px; }
-.big .unit { font-size:18px; letter-spacing:0; color:var(--fm-muted); margin-left:6px; }
-.import .net { color:var(--fm-import); } .export .net { color:var(--fm-export); }
-.sub { font-size:13px; color:var(--fm-muted); margin-top:4px; }
+.big .unit { font-size:18px; letter-spacing:0; color:var(--dm-muted); margin-left:6px; }
+.import .net { color:var(--dm-import); } .export .net { color:var(--dm-export); }
+.sub { font-size:13px; color:var(--dm-muted); margin-top:4px; }
 .chips { display:flex; gap:6px; margin-top:10px; flex-wrap:wrap; }
 .chip { display:inline-flex; align-items:center; gap:5px; font-size:12px; padding:5px 10px 5px 7px; border-radius:999px;
   background:color-mix(in srgb,currentColor 12%,transparent); }
-.chip span { color:var(--fm-muted); } .chip b { color:var(--fm-text); }
+.chip span { color:var(--dm-muted); } .chip b { color:var(--dm-text); }
 .chip .ico { width:14px; height:14px; }
 @media (hover:hover) { .chip:hover { filter:brightness(1.15); } }
 </style>

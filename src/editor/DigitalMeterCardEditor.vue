@@ -1,4 +1,4 @@
-<!-- Root of the <fluvius-meter-card-editor> custom element (see elements.ts). -->
+<!-- Root of the <digital-meter-card-editor> custom element (see elements.ts). -->
 <script setup lang="ts">
 import { computed, ref, useHost, watch } from "vue";
 import { CARD_TYPE } from "../const";

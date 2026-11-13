@@ -8,11 +8,11 @@
  */
 import { defineCustomElement } from "vue";
 import { EDITOR_TYPE, resolveConfig } from "./const";
-import FluviusMeterCardEditorVue from "./editor/FluviusMeterCardEditor.vue";
-import FluviusMeterCardVue from "./FluviusMeterCard.vue";
+import DigitalMeterCardEditorVue from "./editor/DigitalMeterCardEditor.vue";
+import DigitalMeterCardVue from "./DigitalMeterCard.vue";
 import type { CardConfig } from "./types";
 
-export class FluviusMeterCardElement extends defineCustomElement(FluviusMeterCardVue) {
+export class DigitalMeterCardElement extends defineCustomElement(DigitalMeterCardVue) {
   static getConfigElement(): HTMLElement {
     return document.createElement(EDITOR_TYPE);
   }
@@ -35,7 +35,7 @@ export class FluviusMeterCardElement extends defineCustomElement(FluviusMeterCar
   }
 }
 
-export class FluviusMeterCardEditorElement extends defineCustomElement(FluviusMeterCardEditorVue) {
+export class DigitalMeterCardEditorElement extends defineCustomElement(DigitalMeterCardEditorVue) {
   setConfig(config: CardConfig): void {
     this.config = config ?? {};
   }

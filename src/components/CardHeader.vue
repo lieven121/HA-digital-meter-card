@@ -27,6 +27,6 @@ const night = computed(() => tariff.value === 2);
 .title { font-size:var(--ha-card-header-font-size, 16px); font-weight:500; }
 .pill { font-size:12px; font-weight:500; padding:4px 10px 4px 8px; border-radius:999px; display:flex; gap:5px; align-items:center; }
 .pill .ico { width:14px; height:14px; }
-.pill.day { background:color-mix(in srgb,var(--fm-day) 16%,transparent); color:var(--fm-day); }
-.pill.night { background:color-mix(in srgb,var(--fm-night) 16%,transparent); color:var(--fm-night); }
+.pill.day { background:color-mix(in srgb,var(--dm-day) 16%,transparent); color:var(--dm-day); }
+.pill.night { background:color-mix(in srgb,var(--dm-night) 16%,transparent); color:var(--dm-night); }
 </style>

@@ -29,7 +29,7 @@ export interface MeterContext {
   stats: Statistics;
 }
 
-const KEY: InjectionKey<MeterContext> = Symbol("fluvius-meter");
+const KEY: InjectionKey<MeterContext> = Symbol("digital-meter");
 
 export function provideMeter(props: { hass: HomeAssistant; config: ResolvedConfig }): MeterContext {
   const hass = () => props.hass;

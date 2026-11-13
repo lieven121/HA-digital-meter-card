@@ -48,6 +48,6 @@ const total = computed(() => (stats.mini[props.kind] ?? []).reduce((a, b) => a +
 .mini { margin:0 -4px; padding:2px 4px; }
 .mini svg { width:100%; height:28px; display:block; }
 .mini rect.on { opacity:.85; } .mini rect.off { opacity:.2; }
-.mini-gas rect { fill:var(--fm-gas); } .mini-water rect { fill:var(--fm-water); }
-.mini-meta { display:flex; justify-content:space-between; font-size:10px; color:var(--fm-muted); margin-top:3px; font-variant-numeric:tabular-nums; }
+.mini-gas rect { fill:var(--dm-gas); } .mini-water rect { fill:var(--dm-water); }
+.mini-meta { display:flex; justify-content:space-between; font-size:10px; color:var(--dm-muted); margin-top:3px; font-variant-numeric:tabular-nums; }
 </style>

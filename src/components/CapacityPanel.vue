@@ -68,26 +68,26 @@ const dash = (fraction: number, circumference: number) => `${Math.min(fraction, 
 </template>
 
 <style>
-.cap { display:flex; gap:14px; align-items:center; margin-top:14px; padding:12px; border-radius:var(--fm-radius); background:var(--fm-soft); }
+.cap { display:flex; gap:14px; align-items:center; margin-top:14px; padding:12px; border-radius:var(--dm-radius); background:var(--dm-soft); }
 .cap .label { margin:0 0 4px; }
 .ring-col { display:flex; flex-direction:column; align-items:center; gap:4px; flex:none; padding:4px; }
 .ring { position:relative; width:84px; height:84px; }
 .ring svg { width:100%; height:100%; transform:rotate(-90deg); }
 .ring circle { fill:none; stroke-width:7; }
-.ring .track { stroke:var(--fm-line); }
+.ring .track { stroke:var(--dm-line); }
 .ring .bar { stroke-linecap:round; transition:stroke-dasharray .6s ease, stroke .4s; }
 .ring .bar.fc { opacity:.3; }
-.ring .qtrack { fill:none; stroke:var(--fm-line); stroke-width:2.5; }
-.ring .qbar { fill:none; stroke:var(--fm-muted); stroke-width:2.5; stroke-linecap:round; transition:stroke-dasharray 1s linear; }
-.cap.ok .bar { stroke:var(--fm-ok); } .cap.warn .bar { stroke:var(--fm-warn); } .cap.over .bar { stroke:var(--fm-bad); }
+.ring .qtrack { fill:none; stroke:var(--dm-line); stroke-width:2.5; }
+.ring .qbar { fill:none; stroke:var(--dm-muted); stroke-width:2.5; stroke-linecap:round; transition:stroke-dasharray 1s linear; }
+.cap.ok .bar { stroke:var(--dm-ok); } .cap.warn .bar { stroke:var(--dm-warn); } .cap.over .bar { stroke:var(--dm-bad); }
 .ring-txt { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:20px; }
-.ring-q { font-size:11px; color:var(--fm-muted); font-variant-numeric:tabular-nums; }
-.ring-txt small { font-size:11px; color:var(--fm-muted); margin-left:1px; }
+.ring-q { font-size:11px; color:var(--dm-muted); font-variant-numeric:tabular-nums; }
+.ring-txt small { font-size:11px; color:var(--dm-muted); margin-left:1px; }
 .cap-info { flex:1; min-width:0; }
 .cap-row { display:flex; justify-content:space-between; font-size:13px; padding:3px 6px; margin:0 -6px; }
-.cap-row span { color:var(--fm-muted); }
-.cap.ok .fc-row b { color:var(--fm-ok); } .cap.warn .fc-row b { color:var(--fm-warn); } .cap.over .fc-row b { color:var(--fm-bad); }
+.cap-row span { color:var(--dm-muted); }
+.cap.ok .fc-row b { color:var(--dm-ok); } .cap.warn .fc-row b { color:var(--dm-warn); } .cap.over .fc-row b { color:var(--dm-bad); }
 .hint { font-size:12px; margin-top:6px; }
-.cap.ok .hint { color:var(--fm-ok); } .cap.warn .hint { color:var(--fm-warn); } .cap.over .hint { color:var(--fm-bad); font-weight:500; }
-@media (hover:hover) { .cap-row:hover, .ring-col:hover { background:var(--fm-hover); } }
+.cap.ok .hint { color:var(--dm-ok); } .cap.warn .hint { color:var(--dm-warn); } .cap.over .hint { color:var(--dm-bad); font-weight:500; }
+@media (hover:hover) { .cap-row:hover, .ring-col:hover { background:var(--dm-hover); } }
 </style>

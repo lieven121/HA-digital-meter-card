@@ -29,7 +29,7 @@ const server = await createServer({ server: { port: 5199, strictPort: true }, lo
 await server.listen();
 const out = resolve("docs");
 mkdirSync(out, { recursive: true });
-const profile = mkdtempSync(join(tmpdir(), "fmc-shot-"));
+const profile = mkdtempSync(join(tmpdir(), "dmc-shot-"));
 
 try {
   for (const s of SHOTS) {

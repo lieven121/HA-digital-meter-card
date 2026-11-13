@@ -1,4 +1,4 @@
-# Fluvius Meter Card
+# Digital Meter Card
 
 Custom Lovelace card for the Belgian digital meter: live import/export, capacity tariff
 (quarter-hour forecast), today's usage per tariff, gas/water, per-phase voltage/current and
@@ -6,10 +6,13 @@ meter readings. Follows the active Home Assistant theme, including the energy co
 
 Built with **Vue 3 + TypeScript + Vite** and shipped as a single JavaScript module.
 
+> This is an independent community project. It is not affiliated with, endorsed by or supported
+> by any grid operator, energy supplier or meter manufacturer.
+
 <p>
-  <img src="docs/card-light.png" alt="Fluvius Meter Card, light theme, Dutch, three phases with gas" width="32%">
-  <img src="docs/card-dark.png" alt="Fluvius Meter Card, dark theme" width="32%">
-  <img src="docs/card-single-phase.png" alt="Fluvius Meter Card, English, single phase without gas" width="32%">
+  <img src="docs/card-light.png" alt="Digital Meter Card, light theme, Dutch, three phases with gas" width="32%">
+  <img src="docs/card-dark.png" alt="Digital Meter Card, dark theme" width="32%">
+  <img src="docs/card-single-phase.png" alt="Digital Meter Card, English, single phase without gas" width="32%">
 </p>
 
 *Light and dark theme (Dutch, three phases with gas) and an English single-phase setup without gas.
@@ -24,7 +27,7 @@ Screenshots come from the dev page with mocked data; regenerate them with `npm r
 1. Click the button above (or in HACS: **⋮ → Custom repositories**, add
    `https://github.com/lieven121/HA-digital-meter-card` with type *Dashboard*).
 2. Click **Download**. HACS adds the dashboard resource for you.
-3. Hard-refresh the browser and add the card via **Add card → Fluvius Meter Card**.
+3. Hard-refresh the browser and add the card via **Add card → Digital Meter Card**.
    Everything (entities, fuse, language, …) can be set in the visual editor.
 
 HACS shows new releases as updates. Pre-releases only appear after enabling
@@ -32,24 +35,22 @@ HACS shows new releases as updates. Pre-releases only appear after enabling
 
 ### Manual
 
-1. Download `fluvius-meter-card.js` from the [latest release](https://github.com/lieven121/HA-digital-meter-card/releases)
-   (or build it yourself: `npm install && npm run build` → `dist/fluvius-meter-card.js`).
-2. Copy it to `/config/www/fluvius-meter-card.js`.
+1. Download `digital-meter-card.js` from the [latest release](https://github.com/lieven121/HA-digital-meter-card/releases)
+   (or build it yourself: `npm install && npm run build` → `dist/digital-meter-card.js`).
+2. Copy it to `/config/www/digital-meter-card.js`.
 3. **Settings → Dashboards → ⋮ → Resources → Add resource**
-   URL `/local/fluvius-meter-card.js?v=1.0.0`, type *JavaScript module*.
+   URL `/local/digital-meter-card.js?v=1.0.0`, type *JavaScript module*.
    Change the `?v=` on every update so browsers don't keep the old file.
-4. Hard-refresh the browser and add the card via **Add card → Fluvius Meter Card**.
+4. Hard-refresh the browser and add the card via **Add card → Digital Meter Card**.
 
-The browser console logs `FLUVIUS-METER-CARD v<version>` so you can see which version is loaded.
+The browser console logs `DIGITAL-METER-CARD v<version>` so you can see which version is loaded.
 
 ## Releasing
 
-1. Bump `version` in `package.json`, run `npm run build`, and commit both together:
-   `dist/fluvius-meter-card.js` is tracked so HACS can install from the branch when there is no
-   full release yet. Tag the commit: `git tag -a v1.2.3 -m v1.2.3`.
-2. Create a GitHub release for the tag with `dist/fluvius-meter-card.js` attached
-   (`gh release create v1.2.3 dist/fluvius-meter-card.js`, add `--prerelease` to test first).
-   HACS installs that release asset.
+1. Bump `version` in `package.json`, commit, and tag it: `git tag -a v1.2.3 -m v1.2.3`.
+2. `npm run build`, then create a GitHub release for the tag with `dist/digital-meter-card.js` attached
+   (`gh release create v1.2.3 dist/digital-meter-card.js`, add `--prerelease` to test first).
+   HACS installs that release asset; pre-releases only reach users who enabled beta versions.
 
 ## Development
 
@@ -67,7 +68,7 @@ The browser console logs `FLUVIUS-METER-CARD v<version>` so you can see which ve
 src/
   main.ts                    registers the elements + the "Add card" entry
   elements.ts                Vue custom elements + HA card API (setConfig, getCardSize, …)
-  FluviusMeterCard.vue       root: theme tokens, remounts the card on config change
+  DigitalMeterCard.vue       root: theme tokens, remounts the card on config change
   const.ts                   default entities/options, resolveConfig()
   i18n.ts                    nl/en strings for card and editor
   types.ts                   config + minimal Home Assistant types

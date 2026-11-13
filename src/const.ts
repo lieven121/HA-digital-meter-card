@@ -1,7 +1,7 @@
 import type { CardConfig, CardOptions, EntityMap, ResolvedConfig } from "./types";
 
-export const CARD_TYPE = "fluvius-meter-card";
-export const EDITOR_TYPE = "fluvius-meter-card-editor";
+export const CARD_TYPE = "digital-meter-card";
+export const EDITOR_TYPE = "digital-meter-card-editor";
 
 export const DEFAULT_ENTITIES: EntityMap = {
   power_consumption: "sensor.electricity_meter_power_consumption",

@@ -13,8 +13,8 @@ const phases = computed(() =>
 // current bar colour: green → orange at amp_warn → red just above it
 const gradient = computed(() => {
   const w = config.value.amp_warn * 100;
-  return `linear-gradient(90deg, var(--fm-ok) 0%, var(--fm-ok) ${Math.max(0, w - 25)}%, var(--fm-warn) ${w}%, `
-    + `var(--fm-bad) ${Math.min(100, w + 15)}%, var(--fm-bad) 100%)`;
+  return `linear-gradient(90deg, var(--dm-ok) 0%, var(--dm-ok) ${Math.max(0, w - 25)}%, var(--dm-warn) ${w}%, `
+    + `var(--dm-bad) ${Math.min(100, w + 15)}%, var(--dm-bad) 100%)`;
 });
 </script>
 

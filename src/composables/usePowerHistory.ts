@@ -65,7 +65,7 @@ export function usePowerHistory(opts: {
       }
       series.value = next;
     } catch (e) {
-      console.warn("fluvius-meter-card: history unavailable", e);
+      console.warn("digital-meter-card: history unavailable", e);
     }
   });
 

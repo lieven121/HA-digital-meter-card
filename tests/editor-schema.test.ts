@@ -10,8 +10,8 @@ describe("editor form data", () => {
 
   it("writes back only values that differ from the defaults", () => {
     const data = { ...toFormData({}), fuse_amps: 40, water: "sensor.water", gas: undefined };
-    expect(fromFormData("custom:fluvius-meter-card", data)).toEqual({
-      type: "custom:fluvius-meter-card",
+    expect(fromFormData("custom:digital-meter-card", data)).toEqual({
+      type: "custom:digital-meter-card",
       fuse_amps: 40,
       // a cleared default entity is stored as "" (disabled)
       entities: { water: "sensor.water", gas: "" },
@@ -19,7 +19,7 @@ describe("editor form data", () => {
   });
 
   it("round-trips a config", () => {
-    const cfg = { type: "custom:fluvius-meter-card", language: "en" as const, entities: { peak_today: "sensor.peak" } };
+    const cfg = { type: "custom:digital-meter-card", language: "en" as const, entities: { peak_today: "sensor.peak" } };
     expect(fromFormData(cfg.type, toFormData(cfg))).toEqual(cfg);
   });
 });

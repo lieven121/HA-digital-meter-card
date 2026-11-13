@@ -1,5 +1,5 @@
 import "../src/main";
-import type { FluviusMeterCardElement } from "../src/elements";
+import type { DigitalMeterCardElement } from "../src/elements";
 import type { CardConfig, HomeAssistant } from "../src/types";
 import { startMockHass } from "./mock-hass";
 
@@ -17,7 +17,7 @@ if (params.has("theme")) {
 const only = params.get("card");
 
 const cards = configs.filter((_, i) => only == null || String(i) === only).map((config) => {
-  const card = document.createElement("fluvius-meter-card") as FluviusMeterCardElement;
+  const card = document.createElement("digital-meter-card") as DigitalMeterCardElement;
   card.setConfig(config);
   document.getElementById("cards")!.appendChild(card);
   return card;
