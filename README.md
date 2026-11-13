@@ -84,7 +84,6 @@ src/
 dev/                         mock hass + dev page entry (?theme=dark, ?card=1)
 tests/                       vitest
 scripts/screenshots.mjs      README screenshots → docs/
-legacy/                      the original single-file card, for reference
 ```
 
 ### Notes
