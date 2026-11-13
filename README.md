@@ -44,9 +44,12 @@ The browser console logs `FLUVIUS-METER-CARD v<version>` so you can see which ve
 
 ## Releasing
 
-1. Bump `version` in `package.json`, commit, and tag it: `git tag -a v1.2.3 -m v1.2.3`.
-2. `npm run build`, then create a GitHub release for the tag with `dist/fluvius-meter-card.js` attached
-   (`gh release create v1.2.3 dist/fluvius-meter-card.js`). HACS installs that release asset.
+1. Bump `version` in `package.json`, run `npm run build`, and commit both together:
+   `dist/fluvius-meter-card.js` is tracked so HACS can install from the branch when there is no
+   full release yet. Tag the commit: `git tag -a v1.2.3 -m v1.2.3`.
+2. Create a GitHub release for the tag with `dist/fluvius-meter-card.js` attached
+   (`gh release create v1.2.3 dist/fluvius-meter-card.js`, add `--prerelease` to test first).
+   HACS installs that release asset.
 
 ## Development
 

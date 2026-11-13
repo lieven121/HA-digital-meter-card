@@ -1,3 +1,5 @@
 node_modules/
-dist/
+# the built card is committed so HACS can install from the branch
+dist/*
+!dist/fluvius-meter-card.js
 *.log
